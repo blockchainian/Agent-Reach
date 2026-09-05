@@ -115,6 +115,7 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 | 📖 **Reddit** | —（没有零配置路径：匿名接口已被封） | 搜索 + 读帖子和评论 | 桌面装 OpenCLI 用浏览器登录态；或 rdt-cli + Cookie |
 | 📘 **Facebook** | — | 搜索、主页、Feed、群组列表 | 桌面装 OpenCLI（复用 Chrome 登录态） |
 | 📷 **Instagram** | — | 用户搜索、Profile、用户最近帖子、Explore | 桌面装 OpenCLI（复用 Chrome 登录态） |
+| 🎵 **TikTok** | — | 视频搜索、Profile、用户最近视频、推荐流 | 桌面装 OpenCLI（复用 Chrome 登录态） |
 | 📕 **小红书** | — | 搜索、阅读、评论 | OpenCLI 只用用户已有 Chrome 会话；MCP/存量工具用 Cookie-Editor |
 | 🎮 **Discord** | — | 服务器/频道消息同步、搜索、导出 | 告诉 Agent「帮我配 Discord」（user token，建议专用小号） |
 | ✈️ **Telegram** | — | 对话/频道消息同步、搜索、导出、监听 | 告诉 Agent「帮我配 Telegram」（手机号登录一次） |
@@ -217,6 +218,7 @@ channels/
 ├── reddit.py       → OpenCLI ▸ rdt-cli（无零配置路径，必须登录态）
 ├── facebook.py     → OpenCLI（桌面浏览器登录态）
 ├── instagram.py    → OpenCLI（桌面浏览器登录态）
+├── tiktok.py       → OpenCLI（桌面浏览器登录态）
 ├── xiaohongshu.py  → OpenCLI ▸ xiaohongshu-mcp ▸ xhs-cli
 ├── linkedin.py     → mcp-server-linkedin ▸ Jina Reader
 ├── rss.py          → feedparser

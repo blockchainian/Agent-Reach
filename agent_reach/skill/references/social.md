@@ -1,6 +1,6 @@
 # 社交媒体 & 社区
 
-小红书、Twitter/X、B站、V2EX、Reddit、Facebook、Instagram、Discord、Telegram。
+小红书、Twitter/X、B站、V2EX、Reddit、Facebook、Instagram、TikTok、Discord、Telegram。
 
 ## 小红书 / XiaoHongShu（多后端）
 
@@ -299,6 +299,29 @@ opencli instagram saved --limit 20 -f yaml
 ```
 
 > 要求 Chrome 打开且装了 OpenCLI 扩展，并已登录 instagram.com。`instagram search` 是用户搜索；读帖子需要先确定 username，再用 `instagram user USERNAME`。若出现 429 / login required，先让用户在 Chrome 里重新登录并降低频率。
+
+## TikTok（OpenCLI，必须登录态）
+
+TikTok 走 OpenCLI，复用用户 Chrome 里的 tiktok.com 登录态。先跑 `agent-reach doctor --json` 看 tiktok 的 `active_backend`，正常应为 `OpenCLI`。
+
+```bash
+# 搜索视频（返回作者、描述、播放/点赞/评论/分享数、链接）
+opencli tiktok search "query" --limit 10 -f yaml
+
+# 用户 Profile
+opencli tiktok profile USERNAME -f yaml
+
+# 用户最近视频
+opencli tiktok user USERNAME -f yaml
+
+# 推荐流 / 热门
+opencli tiktok explore -f yaml
+
+# 直播列表
+opencli tiktok live -f yaml
+```
+
+> 要求 Chrome 打开且装了 OpenCLI 扩展，并已登录 tiktok.com（未登录先跑 `opencli tiktok login`）。`tiktok search` 是视频关键词搜索。只用读操作；follow/like/comment/save 等写操作不要调用。若出现 login required / 风控验证，先让用户在 Chrome 里重新登录并降低频率。
 
 ## Discord (discord-cli，必须登录态)
 
