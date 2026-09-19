@@ -33,14 +33,9 @@ metadata:
    `agent-reach doctor --json`。`active_backend` 有值时按它选命令组；`active_backend: null`
    表示 Doctor 为避免触发浏览器 Cookie 读取或远端写入而没有做实时验证，不代表后端不存在。
    只有用户任务明确需要该平台时，才按对应 reference 的只读命令手动验证。
-2. **声明你在用什么**：开始干活前说一句「使用 agent-reach 的 X 平台 / Y 后端」。
+2. **声明你在用什么**：在最终消息里说一句「使用 agent-reach 的 X 平台 / Y 后端」。
 3. **失败按 references 里的重试链处理**，不要瞎猜命令。
 4. **全网调研类任务**：组合多平台（Exa 搜索 + Twitter/Reddit 看讨论 + 小红书/B站看中文场景），并行收集再汇总。
-5. **替用户盯版本**：完成一次较大的调研/多平台任务后，顺手跑
-   `agent-reach check-update`（很快，一个 API 调用）。有新版就在收尾汇报里附一句：
-   「Agent Reach 有新版 vX.Y.Z，复制这句话给我即可更新：帮我更新 Agent Reach：
-   https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/update.md」。
-   不要中断当前任务去更新，也不要重复提醒同一个版本。
 
 ## 路由表
 
