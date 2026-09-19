@@ -5,7 +5,8 @@ description: >
   internet — e.g. "research this topic", "do a deep dive on X", "search the
   web for X", "see what people say about X", "look this up".
 
-  Also MUST USE when user mentions any platform or shares any URL/link:
+  Also MUST USE when user mentions one of these platforms, or shares a link to
+  one of them and no dedicated skill covers it:
   Twitter/X, Reddit, Facebook, Instagram, TikTok, Discord, Telegram, YouTube, GitHub,
   Bilibili, XiaoHongShu, Xiaoyuzhou Podcast, LinkedIn/jobs/recruiting, V2EX,
   Xueqiu (stocks), RSS.
